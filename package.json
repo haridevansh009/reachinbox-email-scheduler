@@ -1,0 +1,20 @@
+{
+  "name": "reachinbox-email-scheduler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-grade email scheduler: Express + BullMQ + Redis + PostgreSQL + Next.js",
+  "scripts": {
+    "infra:up": "docker compose up -d",
+    "infra:down": "docker compose down",
+    "infra:reset": "docker compose down -v && docker compose up -d",
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "setup": "npm --prefix backend run setup",
+    "verify": "npm --prefix backend run verify",
+    "dev:api": "npm --prefix backend run dev",
+    "dev:worker": "npm --prefix backend run dev:worker",
+    "dev:web": "npm --prefix frontend run dev",
+    "build": "npm --prefix backend run build && npm --prefix frontend run build",
+    "typecheck": "npm --prefix backend run typecheck && npm --prefix frontend run typecheck",
+    "loadtest": "npm --prefix backend run loadtest --"
+  }
+}
